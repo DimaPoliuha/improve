@@ -11,136 +11,250 @@
 <body>
 	<header>
 		<div class="container">
-			<a href="index.html"><img class="logo-head" src="images/improve.png"></a>
+			<a href="index.html"><img class="logo-head" src="images/improve.svg"></a>
 			<nav>
 				<a href="#info" class="text-head">Інформація</a>
-				<a href="#blank" class="text-head">Анкета</a>
+				<a href="#form" class="text-head">Анкета</a>
 				<a href="#courses" class="text-head">Курси</a>
 				<a href="#vacancies" class="text-head">Вакансії</a>
 			</nav>
+			<div class="btn-menu"><input type="submit" class="menusub js-slideout-toggle" name="" value=""/></div>
 		</div>
 	</header>
 
-	<article class="section-two">
-		<div class="hello-img">
-			<img class="hello" src="images/hello.svg" align="left"/>
-		</div>
+	<script src="assets/script.js" async></script>
+
+	<script src="assets/slideout.js" async></script>
+
+	<nav class="menu displ-none">
+		<a href="#info" class="text-menu">Інформація</a>
+		<hr class="line-header"/>
+		<a href="#form" class="text-menu">Анкета</a>
+		<hr class="line-header"/>
+		<a href="#courses" class="text-menu">Курси</a>
+		<hr class="line-header"/>
+		<a href="#vacancies" class="text-menu">Вакансії</a>
+	</nav>
+
+	<!--div class="menu">
+		<hr class="line-header"/>
 		<div class="container">
-			<div class="txttt">
-				<h1>Improve</h1>
-				<h3>Знайди своє місце на шляху до успіху</h3>
-			</div>
+			<nav>
+				<a href="#info" class="text-menu">Інформація</a>
+				<hr class="line-header"/>
+				<a href="#form" class="text-menu">Анкета</a>
+				<hr class="line-header"/>
+				<a href="#courses" class="text-menu">Курси</a>
+				<hr class="line-header"/>
+				<a href="#vacancies" class="text-menu">Вакансії</a>
+			</nav>
 		</div>
-	</article>
+	</div-->
 	
-	<a name="info"></a>
-	<article class="section-three">
-		<div class="work-img">
-			<img src="images/work.svg"/>
-		</div>
-		<div class="container">
-			<div class="txtt">
-				<h1>Обери напрям</h1>
-				<h3>Обери напрямок в ІТ, яким ти захоплюєшся. Важливо вчити те, що тобі дійсно подобається. Твоя завзятість є ключем до успіху.</h3>		
+	<div id="main">
+		<article class="section-two">
+			<div class="hello-img">
+				<img class="hello" src="images/hello.svg" align="left"/>
 			</div>
-			<div class="txtt">
-				<h1>Знайди курси для розвитку</h1>
-				<h3>Інвестуй у своє майбутнє та проходь запропоновані нами курси. Практичні заняття, кваліфіковані викладачі та актуальні знання, без яких стати успішним сьогодні - неможливо.</h3>
-			</div>
-			<div class="txtt">
-				<h1>Пошук роботи</h1>
-				<h3>Якщо ти вже готовий шукати роботу, ми допоможемо тобі знайти її. Обирай що тобі до вподоби серед запропонованих нами рекомендованих роботодавців.</h3>
-			</div>
-		</div>
-	</article>
-
-	<a name="blank"></a>
-	<article class="section-four">
-		<div class="blank-img">
-			<img src="images/blank.svg"/>
-		</div>
-		<div class="container">
-			<div id="txttt">
-				<h1>Зроби перший крок</h1>
-				<h3>пройди анкету</h3>
-				<input type="button" class="try" value="Спробуй"/>
-			</div>
-		</div>
-
-		<div id="questions">
-			<script src="assets/questions.js" defer></script>
-
 			<div class="container">
-				<div class="prev">
-
-				</div>
-
-				<div class="current">
-					<h2>Готовы ли вы к взрослой жизни?</h2>
-					<div class="check-ans"></div>
-					<input type="button" class="ans 0" value="Конечно"/>
-					<div class="check-ans"></div>
-					<input type="button" class="ans 1" value="Пока что не знаю, но склоняюсь к положительному ответу, хотя и не могу сказать наверняка"/>
-					<div class="check-ans"></div>
-					<input type="button" class="ans 2" value="Скорее нет чем да"/>
-					<div class="check-ans"></div>
-					<input type="button" class="ans 3" value="Нет"/>
-				</div>
-
-				<div class="new">
-					<h2>Готовы ли вы к прохождение этого теста?</h2>
-					<div class="check-ans"></div>
-					<input type="button" class="ans 4" value="Да"/>
-					<div class="check-ans"></div>
-					<input type="button" class="ans 5" value="Нет"/>
+				<div class="txttt">
+					<h1>Improve</h1>
+					<h3>Знайди своє місце на шляху до успіху</h3>
 				</div>
 			</div>
-		</div>
+		</article>
+		
+		<a name="info"></a>
+		<article class="section-three">
+			<div class="work-img">
+				<img src="images/work.svg"/>
+			</div>
+			<div class="container">
+				<div class="txtt">
+					<h1>Обери напрям</h1>
+					<h3>Пройшовши анкету, знайдеш дійсно цікавий напрямок в ІТ, який буде тобі до душі. Важливо вчити те, що тобі дійсно подобається. Наполегливість є ключем до успіху.</h3>		
+				</div>
+				<div class="txtt">
+					<h1>Проходь курси</h1>
+					<h3>Інвестуй у своє майбутнє та проходь запропоновані нами курси для розвитку та набуття навичок. Кваліфіковані викладачі, актуальні теми та практика - три складові ефективної IT освіти.</h3>
+				</div>
+				<div class="txtt">
+					<h1>Знайди роботу</h1>
+					<h3>Якщо ти вже готовий застосовувати свої вміння, ми допоможемо тобі знайти стажування, інтернатуру або роботу. Обирай те, що тобі до вподоби серед рекомендованих нами компаній та роботодавців. І починай будувати свою IT кар'єру вже сьогодні!</h3>
+				</div>
+			</div>
+		</article>
 
-	</article>
+		<a name="form"></a>
+		<article class="section-four">
+			<div class="blank-img">
+				<img class="blnk" src="images/blank.svg"/>
+			</div>
+			<div class="container">
+				<div id="txttt">
+					<h1>Зроби перший крок</h1>
+					<h3>пройди анкету</h3>
+					<input type="button" class="try" value="Спробуй"/>
+				</div>
+			</div>
 
-	<article class="section-five">
-		<div class="container">
+			<div id="questions">
+				<div class="container">
+					<div class="deleted">
 
-		</div>
-	</article>
+					</div>
 
-	<a name="courses"></a>
-	<article class="section-six">
-		<img class="courses" src="images/rutor.svg" align="right"/>
-		<div class="container">
+					<div class="prev">
 
-		</div>
-	</article>
+					</div>
 
-	<a name="vacancies"></a>
-	<article class="section-seven">
-		<img class="vacancies" src="images/vac.svg" align="left"/>
-		<div class="container">
+					<div class="current">
+						<h2>Готовы ли вы к взрослой жизни?</h2>
+						<input type="radio" name="radio" class="check-ans"/>
+						<input type="button" class="ans" value="Конечно"/>
+						<input type="radio" name="radio" class="check-ans"/>
+						<input type="button" class="ans" value="Пока что не знаю, но склоняюсь к положительному ответу, хотя и не могу сказать наверняка"/>
+						<input type="radio" name="radio" class="check-ans"/>
+						<input type="button" class="ans" value="Скорее нет чем да"/>
+						<input type="radio" name="radio" class="check-ans"/>
+						<input type="button" class="ans" value="Нет"/>
+					</div>
 
-		</div>
-	</article>
+					<div class="ask1 displ-none">
+						<h2>Готовы ли вы к прохождение этого теста?</h2>
+						<input type="radio" name="radio" class="check-ans"/>
+						<input type="button" class="ans" value="Да"/>
+						<input type="radio" name="radio" class="check-ans"/>
+						<input type="button" class="ans" value="Нет"/>
+					</div>
 
-	<article class="section-eight">
-		<div class="container">
-			<h2>Написати нам</h2>
-			<h3>gagarin@aprodos.kpi.ua</h3>
-			<h2>Технічна підтримка</h2>
-			<h3>+38(067)-111-22-33</h3>
-		</div>
-		<div class="img-flex">
-			<img class="chat" src="images/chat.svg"/>
-		</div>
-	</article>
+					<div class="ask2 displ-none">
+						<h2>Готовы ли вы?</h2>
+						<input type="radio" name="radio" class="check-ans"/>
+						<input type="button" class="ans" value="Yes"/>
+						<input type="radio" name="radio" class="check-ans"/>
+						<input type="button" class="ans" value="Nonono"/>
+					</div>
 
-	<footer>
-		<div class="container">
-			<h2>Kyiv 2017</h2>
-			<hr class="line-footer"/>
-			<h2>Developed by the A team</h2>
-			<hr class="line-footer"/>
-			<h2>© Improve</h2>
-		</div>
-	</footer>
+					<div class="ask3 displ-none">
+						<h2>Ли вы?</h2>
+						<input type="radio" name="radio" class="check-ans"/>
+						<input type="button" class="ans" value="Yes"/>
+						<input type="radio" name="radio" class="check-ans"/>
+						<input type="button" class="ans" value="No"/>
+					</div>
+				</div>
+			</div>
+
+		</article>
+
+		<article class="section-five">
+			<div class="container">
+
+			</div>
+		</article>
+
+		<a name="courses"></a>
+		<article class="section-six">
+			<img class="courses" src="images/rutor.svg"/>
+			<div class="container">
+				<h1 class="c-h">Курси</h2>
+				<div class="row">
+					<div class="col">
+						<div class="hdr"><h2>HTML</h2></div>
+						<div class="txt">
+							<h3>Lorem ipsum dolor sit amet, ea tollit vituperatoribus pro. Et his agam errem, eos cu saepe civibus, fierent dolores quaestio pri ut. Pri odio tempor volumus an. Sea cu tibique torquatos. Cu quot percipit pericula nam, idque equidem albucius vis ea. Vel an modus democritum, ut usu virtute repudiandae mandamus.</h3>
+						</div>
+					</div>
+					<div class="col">
+						<div class="hdr"><h2>CSS</h2></div>
+						<div class="txt">
+							<h3>Lorem ipsum dolor sit amet, ea tollit vituperatoribus pro. Et his agam errem, eos cu saepe civibus, fierent dolores quaestio pri ut. Pri odio tempor volumus an. Sea cu tibique torquatos. Cu quot percipit pericula nam, idque equidem albucius vis ea. Vel an modus democritum, ut usu virtute repudiandae mandamus.</h3>
+						</div>
+					</div>
+					<div class="col">
+						<div class="hdr"><h2>JS</h2></div>
+						<div class="txt">
+							<h3>Lorem ipsum dolor sit amet, ea tollit vituperatoribus pro. Et his agam errem, eos cu saepe civibus, fierent dolores quaestio pri ut. Pri odio tempor volumus an. Sea cu tibique torquatos. Cu quot percipit pericula nam, idque equidem albucius vis ea. Vel an modus democritum, ut usu virtute repudiandae mandamus.</h3>
+						</div>
+					</div>
+					<div class="col">
+						<div class="hdr"><h2>C++</h2></div>
+						<div class="txt">
+							<h3>Lorem ipsum dolor sit amet, ea tollit vituperatoribus pro. Et his agam errem, eos cu saepe civibus, fierent dolores quaestio pri ut. Pri odio tempor volumus an. Sea cu tibique torquatos. Cu quot percipit pericula nam, idque equidem albucius vis ea. Vel an modus democritum, ut usu virtute repudiandae mandamus.</h3>
+						</div>
+					</div>
+					<div class="col">
+						<div class="hdr"><h2>C#</h2></div>
+						<div class="txt">
+							<h3>Lorem ipsum dolor sit amet, ea tollit vituperatoribus pro. Et his agam errem, eos cu saepe civibus, fierent dolores quaestio pri ut. Pri odio tempor volumus an. Sea cu tibique torquatos. Cu quot percipit pericula nam, idque equidem albucius vis ea. Vel an modus democritum, ut usu virtute repudiandae mandamus.</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		</article>
+
+		<a name="vacancies"></a>
+		<article class="section-seven">
+			<img class="vacancies" src="images/vac.svg" align="left"/>
+			<div class="container">
+				<h1 class="c-h">Вакансії</h2>
+				<div class="row">
+					<div class="col">
+						<div class="hdr"><h2>HTML</h2></div>
+						<div class="txt">
+							<h3>Lorem ipsum dolor sit amet, nam ut veritus consequuntur, pro causae audiam in. No ullum possim mei. Idque dicit voluptaria in duo, sed augue honestatis ea, verear principes hendrerit et mel. Possit civibus has id, illum ullum id pri, phaedrum instructior mel te. Vim putant luptatum constituto at, sea deleniti.</h3>
+						</div>
+					</div>
+					<div class="col">
+						<div class="hdr"><h2>CSS</h2></div>
+						<div class="txt">
+							<h3>Lorem ipsum dolor sit amet, nam ut veritus consequuntur, pro causae audiam in. No ullum possim mei. Idque dicit voluptaria in duo, sed augue honestatis ea, verear principes hendrerit et mel. Possit civibus has id, illum ullum id pri, phaedrum instructior mel te. Vim putant luptatum constituto at, sea deleniti.</h3>
+						</div>
+					</div>
+					<div class="col">
+						<div class="hdr"><h2>JS</h2></div>
+						<div class="txt">
+							<h3>Lorem ipsum dolor sit amet, nam ut veritus consequuntur, pro causae audiam in. No ullum possim mei. Idque dicit voluptaria in duo, sed augue honestatis ea, verear principes hendrerit et mel. Possit civibus has id, illum ullum id pri, phaedrum instructior mel te. Vim putant luptatum constituto at, sea deleniti.</h3>
+						</div>
+					</div>
+					<div class="col">
+						<div class="hdr"><h2>C++</h2></div>
+						<div class="txt">
+							<h3>Lorem ipsum dolor sit amet, nam ut veritus consequuntur, pro causae audiam in. No ullum possim mei. Idque dicit voluptaria in duo, sed augue honestatis ea, verear principes hendrerit et mel. Possit civibus has id, illum ullum id pri, phaedrum instructior mel te. Vim putant luptatum constituto at, sea deleniti.</h3>
+						</div>
+					</div>
+					<div class="col">
+						<div class="hdr"><h2>C#</h2></div>
+						<div class="txt">
+							<h3>Lorem ipsum dolor sit amet, nam ut veritus consequuntur, pro causae audiam in. No ullum possim mei. Idque dicit voluptaria in duo, sed augue honestatis ea, verear principes hendrerit et mel. Possit civibus has id, illum ullum id pri, phaedrum instructior mel te. Vim putant luptatum constituto at, sea deleniti.</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		</article>
+
+		<article class="section-eight">
+			<div class="container">
+				<h2>Написати нам</h2>
+				<h3>gagarin@aprodos.kpi.ua</h3>
+				<h2>Технічна підтримка</h2>
+				<h3>+38(067)-111-22-33</h3>
+			</div>
+			<div class="img-flex">
+				<img class="chat" src="images/chat.svg"/>
+			</div>
+		</article>
+
+		<footer>
+			<div class="container">
+				<h2>Kyiv 2018</h2>
+				<hr class="line-footer"/>
+				<h2>Developed by the A team</h2>
+				<hr class="line-footer"/>
+				<h2>© Improve</h2>
+			</div>
+		</footer>
+	</div>
 </body>
 </html>
