@@ -89,6 +89,17 @@ window.onload = function () {
     for(var i = 0; i < ans.length; i++)
     {
         ans[i].addEventListener( 'click', questions );
+        ans[i].addEventListener( 'click', radioChecked );
+    }
+
+    var rad = dom.classes( 'radio-ans' );
+    for(var i = 0; i < rad.length; i++)
+    {
+        rad[i].addEventListener( 'click', questions );
+    }
+
+    function radioChecked(){
+        dom.id( 'radio-' + this.id + '' ).checked = true;
     }
 
     /*
