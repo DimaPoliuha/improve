@@ -156,7 +156,7 @@ window.onload = function () {
     /********** NEW FUNCTION **********/
 
     var staticCounter = 0;
-
+/*
     function questions(count){
         // var prev = dom.class('prev');
         // //prev.classList.add('disappear-prev');
@@ -170,7 +170,7 @@ window.onload = function () {
         3) добавляем новый курр (создаем)
         4) курр ставим на место (ставим)
         */
-
+/*
         setTimeout(function() {
 
             var prev = dom.class('prev');
@@ -195,6 +195,39 @@ window.onload = function () {
 
             staticCounter++;
         }, 0)
+    }
+    */
+   function questions(count){
+        /* TODO
+        1) из прев переносим в делетед (удаляем)
+        2) из курр переносим в прев (переставляем)
+        3) добавляем новый курр (создаем)
+        4) курр ставим на место (ставим)
+        */
+       var prev = dom.class('prev');
+       var curr = dom.class('current');
+
+       //prev переносим в deleted для анимации смахивания
+       prev.className = 'deleted';
+       var del = dom.class('deleted');
+       del.classList.add('deleted-dissappear');
+       //curr переносим в prev для анимации поднятия в левый верхний угол
+       curr.className = 'prev';
+       var prev = dom.class('prev');
+       prev.classList.add('prev-up');
+
+        // достаем новый див из ???
+        var newDiv = questArr[staticCounter]; // var newDiv = questArr[i];
+        // присваиваем текущий класс для нового вопроса
+        newDiv.className = 'current';
+
+        setTimeout(function() {
+
+
+            var del = dom.class('deleted');
+            del.parentNode.removeChild(del);
+            staticCounter++;
+        }, 600)
     }
 
 };

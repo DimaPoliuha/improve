@@ -296,11 +296,16 @@ header {
 		min-height: 100vh;
 		position: absolute;
 		display: none;
+
+		.container{
+			display: block;
+			padding-top: 22%;
+			position: relative;
+		}
 		
 		h2{
 			color: @white;
-			margin: 0 0 0 268px;
-			margin-bottom: 20px;
+			margin: 0 0 20px 268px;
 		}
 
 		.ans{
@@ -367,14 +372,60 @@ header {
 		}
 		*/
 		.prev{
+			position: absolute;
+			margin-top: -28%;
+			transform: scale(0.95);
+			opacity: 0.8;
 
 			h2{
 				color: @prev;
-				//font-size: 16px;
+				font-size: 17px;
+				margin: 0 0 20px 178px;
 			}
 
 			.ans{
 				color: @prev;
+				width: 440px;
+				margin: 0 0 8px 180px;
+			}
+
+			.radio-ans + label:before {
+				left: -433.2px;
+				top: -1px;
+			}
+	
+			.radio-ans + label:after {
+				left: -432px;
+				transition: 0s;
+			}
+		}
+
+		.deleted{
+			position: absolute;
+			margin-top: -28%;
+			transform: scale(0.95);
+			opacity: 0.8;
+
+			h2{
+				color: @prev;
+				font-size: 17px;
+				margin: 0 0 20px 178px;
+			}
+
+			.ans{
+				color: @prev;
+				width: 440px;
+				margin: 0 0 8px 180px;
+			}
+
+			.radio-ans + label:before {
+				left: -433.2px;
+				top: -1px;
+			}
+	
+			.radio-ans + label:after {
+				left: -432px;
+				transition: 0s;
 			}
 		}
 	}
@@ -454,7 +505,72 @@ header {
 		}
 	}
 
+
+
+
+
+
+
+
 	/*Slide animation*/
+
+	.deleted-dissappear{
+		opacity: 0.8;
+		transform: scale(0.95);
+		visibility: visible;
+	
+		animation-name: deleted_dissappear_animation;
+		animation-duration: 600ms;
+		animation-delay: 0ms;
+		animation-timing-function: ease-in;
+		animation-fill-mode: forwards;
+	}
+	
+	@keyframes deleted_dissappear_animation {
+		100% {
+			opacity: 0;
+			transform: scale(.75);
+			visibility: hidden;
+			transform: translateX(-800px) translateY(-50px);
+		}
+	}
+
+	.prev-up{
+		opacity: 1;
+		margin-top: 0%;
+		transform: scale(1);
+	
+		animation-name: prev_up_animation;
+		animation-duration: 600ms;
+		animation-delay: 0ms;
+		animation-timing-function: ease-in;
+		animation-fill-mode: forwards;
+	}
+	
+	@keyframes prev_up_animation {
+		100% {
+			opacity: 0.8;
+			margin-top: -28%;
+			transform: scale(0.95);
+		}
+	}
+
+	.curr-appear{
+
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+	/*
 	.slide-up {
 		animation-name: slide_up_animation;
 		animation-duration: 400ms;
@@ -554,6 +670,7 @@ header {
 			transform: translateX(0px) translateY(0px) scale(1);
 		}
 	}
+	*/
 
 /*Section 5*/
 

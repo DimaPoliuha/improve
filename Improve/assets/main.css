@@ -245,10 +245,14 @@ header .container .btn-menu {
 		}
 		*/
 }
+.section-four #questions .container {
+  display: block;
+  padding-top: 22%;
+  position: relative;
+}
 .section-four #questions h2 {
   color: #ffffff;
-  margin: 0 0 0 268px;
-  margin-bottom: 20px;
+  margin: 0 0 20px 268px;
 }
 .section-four #questions .ans {
   text-align: left;
@@ -301,11 +305,53 @@ header .container .btn-menu {
 .section-four #questions .radio-ans:checked + label:after {
   opacity: 1;
 }
+.section-four #questions .prev {
+  position: absolute;
+  margin-top: -28%;
+  transform: scale(0.95);
+  opacity: 0.8;
+}
 .section-four #questions .prev h2 {
   color: #016b7e;
+  font-size: 17px;
+  margin: 0 0 20px 178px;
 }
 .section-four #questions .prev .ans {
   color: #016b7e;
+  width: 440px;
+  margin: 0 0 8px 180px;
+}
+.section-four #questions .prev .radio-ans + label:before {
+  left: -433.2px;
+  top: -1px;
+}
+.section-four #questions .prev .radio-ans + label:after {
+  left: -432px;
+  transition: 0s;
+}
+.section-four #questions .deleted {
+  position: absolute;
+  margin-top: -28%;
+  transform: scale(0.95);
+  opacity: 0.8;
+}
+.section-four #questions .deleted h2 {
+  color: #016b7e;
+  font-size: 17px;
+  margin: 0 0 20px 178px;
+}
+.section-four #questions .deleted .ans {
+  color: #016b7e;
+  width: 440px;
+  margin: 0 0 8px 180px;
+}
+.section-four #questions .deleted .radio-ans + label:before {
+  left: -433.2px;
+  top: -1px;
+}
+.section-four #questions .deleted .radio-ans + label:after {
+  left: -432px;
+  transition: 0s;
 }
 /* Animations */
 /*Button disappear animation*/
@@ -370,91 +416,142 @@ header .container .btn-menu {
   }
 }
 /*Slide animation*/
-.slide-up {
-  animation-name: slide_up_animation;
-  animation-duration: 400ms;
-  animation-delay: 0ms;
-  animation-timing-function: ease-in;
-  animation-fill-mode: forwards;
-}
-@keyframes slide_up_animation {
-  100% {
-    transform: translateY(-14vh);
-  }
-}
-.recolor-prev {
-  color: #ffffff;
-  animation-name: recolor_prev_animation;
-  animation-duration: 400ms;
-  animation-delay: 0ms;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
-}
-@keyframes recolor_prev_animation {
-  100% {
-    color: #016b7e;
-  }
-}
-.transform-width {
-  animation-name: transform_width_animation;
-  animation-duration: 400ms;
-  animation-delay: 0ms;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
-}
-@keyframes transform_width_animation {
-  100% {
-    width: 440px;
-  }
-}
-.slide-current {
-  animation-name: slide_current_animation;
-  animation-duration: 700ms;
-  animation-delay: 0ms;
-  animation-timing-function: ease-out;
-  animation-fill-mode: forwards;
-}
-@keyframes slide_current_animation {
-  100% {
-    opacity: 0.8;
-    transform: translateX(-130px) translateY(-50px) scale(0.86);
-  }
-}
-.disappear-prev {
+.deleted-dissappear {
   opacity: 0.8;
-  transform: translateX(-130px) translateY(-50px) scale(0.86);
+  transform: scale(0.95);
   visibility: visible;
-  animation-name: disappear_prev_animation;
-  animation-duration: 400ms;
+  animation-name: deleted_dissappear_animation;
+  animation-duration: 600ms;
   animation-delay: 0ms;
   animation-timing-function: ease-in;
   animation-fill-mode: forwards;
 }
-@keyframes disappear_prev_animation {
+@keyframes deleted_dissappear_animation {
   100% {
     opacity: 0;
     transform: scale(0.75);
     visibility: hidden;
-    transform: translateX(800px) translateY(-50px);
+    transform: translateX(-800px) translateY(-50px);
   }
 }
-.appear-new {
-  opacity: 0;
-  transform: translateX(-130px) translateY(50px) scale(0.75);
-  visibility: hidden;
-  animation-name: appear_new_animation;
-  animation-duration: 400ms;
+.prev-up {
+  opacity: 1;
+  margin-top: 0%;
+  transform: scale(1);
+  animation-name: prev_up_animation;
+  animation-duration: 600ms;
   animation-delay: 0ms;
-  animation-timing-function: ease-out;
+  animation-timing-function: ease-in;
   animation-fill-mode: forwards;
 }
-@keyframes appear_new_animation {
+@keyframes prev_up_animation {
   100% {
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(0px) translateY(0px) scale(1);
+    opacity: 0.8;
+    margin-top: -28%;
+    transform: scale(0.95);
   }
 }
+/*
+	.slide-up {
+		animation-name: slide_up_animation;
+		animation-duration: 400ms;
+		animation-delay: 0ms;
+		animation-timing-function: ease-in;
+		animation-fill-mode: forwards;
+	}
+
+	@keyframes slide_up_animation {
+		100% {
+			transform: translateY(-14vh);
+		}
+	}
+
+	.recolor-prev {
+		color: @white;
+	
+		animation-name: recolor_prev_animation;
+		animation-duration: 400ms;
+		animation-delay: 0ms;
+		animation-timing-function: ease-in-out;
+		animation-fill-mode: forwards;
+	}
+
+	@keyframes recolor_prev_animation {
+		100% {
+			color: @prev;
+		}
+	}
+	
+	.transform-width {
+		animation-name: transform_width_animation;
+		animation-duration: 400ms;
+		animation-delay: 0ms;
+		animation-timing-function: ease-in-out;
+		animation-fill-mode: forwards;
+	}
+
+	@keyframes transform_width_animation {
+		100% {
+			width: 440px;
+		}
+	}
+
+	.slide-current {
+		animation-name: slide_current_animation;
+		animation-duration: 700ms;
+		animation-delay: 0ms;
+		animation-timing-function: ease-out;
+		animation-fill-mode: forwards;
+	}
+
+	@keyframes slide_current_animation {
+		100% {
+			opacity: 0.8;
+			transform: translateX(-130px) translateY(-50px) scale(0.86);
+		}
+	}
+
+	.disappear-prev {
+		opacity: 0.8;
+		transform: translateX(-130px) translateY(-50px) scale(0.86);
+		visibility: visible;
+	
+		animation-name: disappear_prev_animation;
+		animation-duration: 400ms;
+		animation-delay: 0ms;
+		animation-timing-function: ease-in;
+		animation-fill-mode: forwards;
+	}
+	
+	@keyframes disappear_prev_animation {
+		100% {
+			opacity: 0;
+			transform: scale(.75);
+			visibility: hidden;
+			transform: translateX(800px) translateY(-50px);
+		}
+	}
+
+	.appear-new {
+		opacity: 0;
+		transform: translateX(-130px) translateY(50px) scale(0.75);
+		visibility: hidden;
+	
+		animation-name: appear_new_animation;
+		animation-duration: 400ms;
+		animation-delay: 0ms;
+		animation-timing-function: ease-out;
+		animation-fill-mode: forwards;
+	}
+	
+	@keyframes appear_new_animation {
+		100% {
+			opacity: 1;
+			visibility: visible;
+			transform: translateX(0px) translateY(0px) scale(1);
+		}
+	}
+	*/
 /*Section 5*/
 .section-five {
   position: relative;
